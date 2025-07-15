@@ -6,7 +6,7 @@ key = mylist[1]
 for i in mylist[0]:
     for j, k in enumerate(i):
         if k == key:
-            mylist2.append([mylist[0].index(i), i.index(k)])
+            mylist2.append([mylist[0].index(i), j])
         else:
             continue
 
