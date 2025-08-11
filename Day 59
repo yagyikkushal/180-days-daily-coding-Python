@@ -1,1 +1,18 @@
+# Write a Python program to find which characters of a hexadecimal number correspond to prime numbers.
 
+number = '123ABCD'
+mylist = []
+chk = []
+
+def check_prime(num):
+    if num == 1:
+        return False
+    for _ in range(2,num):
+        if num%_ == 0:
+            return False
+    return True
+            
+for _ in number:
+    mylist.append(check_prime(int(_,16)))
+    
+print(mylist)
