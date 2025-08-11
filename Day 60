@@ -1,1 +1,13 @@
+# Write a Python program to find all even palindromes up to n.
 
+uptopalindrome = 2000
+mylist = []
+
+for _ in range(uptopalindrome+1):
+    if _%2 == 0:
+       string = str(_)
+       rev_string = string[::-1]
+       if string == rev_string:
+           mylist.append(int(string)) 
+           
+print(mylist)
