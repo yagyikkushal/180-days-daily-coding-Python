@@ -1,0 +1,17 @@
+# Given an array of numbers representing a branch on a binary tree, write a Python program to find the minimum even value and its index. In the case of a tie, return the smallest index. If there are no even numbers, the answer is [].
+
+mylist = [1, 9, 4, 6, 10, 11, 14, 8]
+
+templist = []
+
+for _ in mylist:
+    if _%2 == 0:
+        templist.append(_)
+        
+templist = sorted(templist)
+
+if not templist:
+    print(templist)
+else:
+    reslist = [templist[0],mylist.index(templist[0])]
+    print(reslist)
