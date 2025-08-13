@@ -1,0 +1,26 @@
+# Write a Python program to filter for numbers in a given list whose sum of digits is > 0, where the first digit can be negative.
+
+mylist = [10, -11, -71, -13, 14, -32]
+res = 0
+reslist = []
+
+for i in mylist:
+    if i >= 0:
+        string = str(i)
+        for j in string:
+            res += int(j)
+        if res > 0:
+            reslist.append(i)
+        res = 0
+    else:
+        string = str(i)
+        for k in string[1:]:
+            if string.index(k) == 1:
+                res += int(k)*-1
+            else:
+                res += int(k)
+        if res > 0:
+            reslist.append(i)
+        res = 0
+                
+print(reslist)
