@@ -1,0 +1,18 @@
+# Write a Python program to find the h-index, the largest positive number h such that h occurs in the sequence at least h times. If there is no such positive number return h = -1.
+
+mylist = [3, 1, 4, 17, 5, 17, 2, 1, 41, 32, 2, 5, 5, 5, 5]
+
+mydict = {}
+reslist = []
+
+for _ in mylist:
+    if _ in mydict:
+        mydict[_] += 1
+    else:
+        mydict[_] = 1
+        
+for i,j in mydict.items():
+    if i == j:
+        reslist.append(i)
+
+print(max(reslist))
