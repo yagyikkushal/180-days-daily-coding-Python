@@ -1,0 +1,10 @@
+# Write a Python program to find even-length words from a given list of words and sort them by length.
+
+mylist = ['The', 'worm', 'ate', 'a', 'bird', 'imagine', 'that', '!', 'Absurd', '!!']
+reslist = {}
+
+for _ in mylist:
+    if len(_)%2 == 0:
+        reslist[_] = len(_)
+        
+print(sorted(reslist.items()))
