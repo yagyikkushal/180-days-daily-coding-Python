@@ -2,9 +2,15 @@
 
 mylist = ['The', 'worm', 'ate', 'a', 'bird', 'imagine', 'that', '!', 'Absurd', '!!']
 reslist = {}
+anslist = []
 
 for _ in mylist:
     if len(_)%2 == 0:
         reslist[_] = len(_)
         
-print(sorted(reslist.items()))
+sortedlist = sorted(reslist.items(),key = lambda x:x[1])
+
+for k,v in sortedlist:
+    anslist.append(k)
+    
+print(anslist)
