@@ -1,0 +1,13 @@
+#Generate fibonacci numbers list based on input
+
+fiblist = [0, 1]
+
+def fibonacci_list(n):
+    for _ in range(n-1):
+        fiblist.append(fiblist[_] + fiblist[_+1])
+    fiblist.pop(0)
+    return fiblist
+    
+num = int(input())
+
+print(fibonacci_list(num))
