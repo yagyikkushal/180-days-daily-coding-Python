@@ -1,0 +1,17 @@
+# Write a Python program to reverse the case of all strings. For those strings, which contain no letters, reverse the strings.
+
+mylist = ['cat', 'catatatatctsa', 'abcdefhijklmnop', '124259239185125', '', 'foo', 'unique']
+reslist = []
+
+for _ in mylist:
+    for i in _:
+        if i.isalpha() == True:
+            temp = 0
+        else:
+            temp = 1 
+    if temp == 0:
+        reslist.append(_.swapcase())
+    else:
+        reslist.append(_[::-1])
+        
+print(reslist)
