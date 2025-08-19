@@ -1,0 +1,10 @@
+# Write a Python program to find the product of the units digits in the numbers in a given list.
+
+mylist = [1002, 2005]
+temp = 1
+
+for _ in mylist:
+    string = str(_)
+    temp *= int(string[-1])
+    
+print(temp)
