@@ -1,0 +1,16 @@
+# Write a Python program to remove duplicates from a list of integers, preserving order.
+
+mylist = [10, 11, 13, 23, 11, 25, 23, 76, 99]
+mydict = {}
+reslist = []
+
+for i in mylist:
+    if i in mydict:
+        mydict[i] += 1
+    else:
+        mydict[i] = 1
+
+for _ in mydict:
+    reslist.append(_)
+    
+print(reslist)
