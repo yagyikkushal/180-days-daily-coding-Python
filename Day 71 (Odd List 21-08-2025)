@@ -1,0 +1,12 @@
+# Write a Python program to find numbers that are greater than 10 and have odd first and last digits.
+
+mylist = [1, 3, 79, 10, 4, 1, 39, 62]
+reslist = []
+
+for _ in mylist:
+    if _ >10:
+        string = str(_)
+        if int(string[0])%2 != 0 and int(string[-1])%2 != 0:
+            reslist.append(_)
+
+print(reslist)
