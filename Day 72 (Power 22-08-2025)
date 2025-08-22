@@ -1,0 +1,11 @@
+# Write a Python program to find an integer exponent x such that a^x = n.
+
+a = 3
+n = 1290070078170102666248196035845070394933441741644993085810116441344597492642263849
+counter = 1
+
+while True:
+    if a**counter == n:
+        print(counter)
+        break
+    counter += 1
