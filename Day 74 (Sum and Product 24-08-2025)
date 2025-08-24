@@ -1,0 +1,18 @@
+# Write a Python program to find the sum of the magnitudes of the elements in the array. This sum should have a sign that is equal to the product of the signs of the entries.
+
+mylist = [-25, -12, -23]
+sumlist = 0
+product = 1
+
+for _ in mylist:
+    if _ < 0:
+        sumlist += (_*-1)
+    else:
+        sumlist += _
+    product *= _
+
+
+if product < 0:
+    print(sumlist*-1)
+else:
+    print(sumlist)
