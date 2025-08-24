@@ -1,0 +1,15 @@
+# Write a Python program to find the biggest even number between two numbers inclusive.
+
+m = 100
+n = 200
+
+if n>m:
+    if n%2 == 0:
+        print(n)
+    else:
+        print(n-1)
+else:
+    if m%2 == 0:
+        print(n)
+    else:
+        print(m-1)
