@@ -1,0 +1,13 @@
+# A valid filename should end in .txt, .exe, .jpg, .png, or .dll, and should have at most three digits, no additional periods. Write a Python program to create a list of True/False that determine whether candidate filename is valid or not.
+
+mylist = ['.txt', 'windows.exe', 'tiger.jpeg', 'rose.c', 'test.java']
+
+reslist = []
+
+for _ in mylist:
+    if (_[-4:] in ['.txt', '.exe', '.jpg', '.png', '.dll']) and len(_)!= 4:
+        reslist.append('Yes')
+    else:
+        reslist.append('No')
+        
+print(reslist)
