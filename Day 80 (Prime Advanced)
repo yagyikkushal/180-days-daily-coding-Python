@@ -1,0 +1,33 @@
+# Write a Python program to find a list of all numbers that are adjacent to a prime number in the list, sorted without duplicates.
+
+mylist = [2, 17, 16, 0, 6, 4, 5]
+
+reslist = []
+templist = []
+
+def isPrime(num):
+    templist = []
+    if num == 0 or num == 1:
+        return False
+    for i in range(2,num):
+        if num%i == 0:
+            templist.append(i)
+    if len(templist) == 0:
+        return True
+    else:
+        return False
+        
+for _ in mylist:
+    if isPrime(_) == True:
+        if mylist.index(_) == 0:
+            reslist.append(mylist[mylist.index(_)+1])
+        elif mylist.index(_) == len(mylist)-1:
+            reslist.append(mylist[len(mylist)-2])
+        else:
+            reslist.append(mylist[mylist.index(_)-1])
+            reslist.append(mylist[mylist.index(_)+1])
+
+myset = set(reslist)
+reslist = list(myset)
+
+print(sorted(reslist))
