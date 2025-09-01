@@ -1,0 +1,5 @@
+# Write a Python program to find the number which when appended to the list makes the total 0.
+
+mylist = [10, 42, 17, 9, 1315182, 184, 102, 29, 15, 39, 755]
+
+print(-1 * (sum(mylist)))
