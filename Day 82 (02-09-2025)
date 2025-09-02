@@ -1,0 +1,12 @@
+# Write a Python program to find the dictionary key whose case is different from all other keys.
+
+
+
+mydict = {'red': '', 'GREEN': '', 'blue': 'orange'}
+reslist = []
+
+for _ in mydict:
+    if _.isupper() == True:
+        reslist.append(1)
+    else:
+        reslist.append(0)
