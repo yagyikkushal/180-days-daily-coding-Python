@@ -1,0 +1,11 @@
+# Write a Python program to find the sum of the even elements that are at odd indices in a given list.
+
+mylist = [1, 2, 8, 3, 9, 4]
+
+resvar = 0
+
+for _ in mylist[1:]:
+    if mylist.index(_)%2!=0 and _%2 == 0:
+        resvar = resvar + _
+
+print(resvar)
