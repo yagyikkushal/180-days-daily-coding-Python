@@ -1,0 +1,30 @@
+# Write a Python program to find the string consisting of all the words whose lengths are prime numbers.
+
+string = "Omicron Effect: Foreign Flights Won't Resume On Dec 15, Decision Later."
+
+mylist = string.split(' ')
+
+restring = str()
+
+def check_prime(n):
+    templist = []
+    if n == 1 or n == 0:
+        return False
+    else:
+        for _ in range(2,n):
+            if n%_ == 0:
+                templist.append(_)
+        
+        if len(templist) == 0:
+            return True
+        else:
+            return False
+        
+
+for _ in mylist:
+    if check_prime(len(_)) == True:
+        restring = restring + " " + _
+
+restring = restring.lstrip()
+        
+print(restring)
