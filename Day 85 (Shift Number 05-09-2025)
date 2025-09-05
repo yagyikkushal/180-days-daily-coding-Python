@@ -1,0 +1,27 @@
+# Write a Python program to shift the decimal digits n places to the left, wrapping the extra digits around. If the shift > the number of digits in n, reverse the string.
+
+n = 12345
+shift = 6
+
+string = str(n)
+
+def shift_string(string):
+    tempstring = [None]*len(string)
+    for _ in string:
+        if string.index(_) == 0:
+            tempstring[-1] = _
+        else:
+            tempstring[string.index(_)-1] = _
+    
+    string = "".join(tempstring)
+    return string
+
+if shift == len(string):
+    print(int(n))
+elif shift > len(string):
+    print(int(string[::-1]))
+else:
+    for _ in range(shift):
+        string = shift_string(string)
+    
+    print(int(string))
